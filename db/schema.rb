@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_06_27_172131) do
+ActiveRecord::Schema.define(version: 2021_06_27_231721) do
 
   create_table "action_text_rich_texts", force: :cascade do |t|
     t.string "name", null: false
@@ -74,7 +74,7 @@ ActiveRecord::Schema.define(version: 2021_06_27_172131) do
   create_table "posts", force: :cascade do |t|
     t.string "title"
     t.text "description"
-    t.boolean "publish"
+    t.boolean "published"
     t.datetime "published_at"
     t.integer "author_id", null: false
     t.datetime "created_at", precision: 6, null: false
