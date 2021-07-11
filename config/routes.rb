@@ -3,10 +3,12 @@ Rails.application.routes.draw do
   get 'home/index'
 
   # Setup root page for Devise gem
-  root to: "home#index"
+  root to: "readers/home#index"
+
   scope module: 'authors' do
     resources :posts do
       resources :elements
     end
   end
+
 end
